@@ -27,4 +27,8 @@ main .input-group input {
   padding-inline: 1rem;
   padding-block: 0.5rem;
   border-radius: 0.4rem;
+}
+main a {
+  color: orangered;
+  text-decoration: none;
 }/*# sourceMappingURL=auth.form.css.map */
