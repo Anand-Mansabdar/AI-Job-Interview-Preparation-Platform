@@ -1,11 +1,9 @@
 import React from "react";
+import { RouterProvider } from "react-router";
+import { router } from "./app.routes.jsx";
 
 const App = () => {
-  return (
-    <div>
-      <h1 style={{ color: "black" }}>Hello World</h1>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
