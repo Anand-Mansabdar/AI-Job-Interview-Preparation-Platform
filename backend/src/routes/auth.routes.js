@@ -3,7 +3,9 @@ const {
   registerUser,
   loginUser,
   logoutUser,
+  getUser,
 } = require("../controllers/auth.controller");
+const { userAuthMiddleware } = require("../middlewares/auth.middleware");
 
 const router = express.Router();
 
@@ -28,5 +30,12 @@ router.post("/login", loginUser);
  * @access Public
  */
 router.get("/logout", logoutUser);
+
+/**
+ * @route GET /api/auth/me
+ * @description get logged in user details
+ * @access Private
+ */
+router.get("/get-me", userAuthMiddleware, getUser);
 
 module.exports = router;

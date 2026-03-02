@@ -126,7 +126,6 @@ const loginUser = async (req, res) => {
   });
 };
 
-
 /**
  * @route User Logout Controller
  * @description Log out an existing user
@@ -145,4 +144,22 @@ const logoutUser = async (req, res) => {
     message: "User logged out successfully",
   });
 };
-module.exports = { registerUser, loginUser, logoutUser };
+
+/**
+ * @route Get User Controller
+ * @description Get Current User Details
+ * @access Private
+ */
+const getUser = async (req, res) => {
+  const user = await userModel.findById(req.user.id);
+
+  return res.status(200).json({
+    message: "User fetched successfully",
+    user: {
+      id: user._id,
+      username: user.username,
+      email: user.email,
+    },
+  });
+};
+module.exports = { registerUser, loginUser, logoutUser, getUser };
