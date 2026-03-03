@@ -13,8 +13,17 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    handleLogin({ email, password });
+    await handleLogin({ email, password });
+    navigate("/");
   };
+
+  if (loading) {
+    return (
+      <main>
+        <h1>Loading...</h1>
+      </main>
+    );
+  }
   return (
     <main>
       <div className="form-container">
