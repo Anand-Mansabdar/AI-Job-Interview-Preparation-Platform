@@ -46,5 +46,6 @@ export const getMe = async () => {
     return response.data;
   } catch (error) {
     console.log(error);
+    return { user: null };
   }
 };
