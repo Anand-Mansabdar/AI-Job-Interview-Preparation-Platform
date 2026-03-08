@@ -1,0 +1,177 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  padding: 2rem 1rem;
+}
+.home .home-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.home .home-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+.home .home-header .home-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.home .home-header .home-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.95;
+  max-width: 700px;
+  margin-inline: auto;
+}
+.home .interview-input-group {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+.home .input-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+.home .file-hint {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+.home .input-group {
+  display: flex;
+  flex-direction: column;
+}
+.home .input-group:has(textarea) {
+  flex: 1;
+}
+.home textarea {
+  width: 100%;
+  min-height: 150px;
+  border: 2px solid #e5e7eb;
+  outline: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  color: #1f2937;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  resize: vertical;
+  transition: all 0.2s ease;
+}
+.home textarea:focus {
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+.home textarea::-moz-placeholder {
+  color: #9ca3af;
+}
+.home textarea::placeholder {
+  color: #9ca3af;
+}
+.home .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.home .left textarea {
+  flex: 1;
+  min-height: 400px;
+}
+.home .file-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+.home .file-label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+.home .file-label:active {
+  transform: translateY(0);
+}
+.home .file-label .file-icon {
+  font-size: 1.2rem;
+}
+.home .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.home .primary-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
+  margin-top: auto;
+}
+.home .primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.4);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+.home .primary-button:active {
+  transform: translateY(0);
+}
+.home .home-footer {
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  padding-top: 1rem;
+}
+.home .home-footer p {
+  margin: 0;
+}
+@media (max-width: 968px) {
+  .home .interview-input-group {
+    flex-direction: column;
+  }
+  .home .left,
+  .home .right {
+    width: 100%;
+  }
+  .home .left textarea {
+    min-height: 250px;
+  }
+  .home .home-header .home-title {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=home.css.map */

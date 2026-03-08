@@ -2,13 +2,14 @@ import { createBrowserRouter } from "react-router";
 import Login from "./features/authentication/pages/Login.jsx";
 import Register from "./features/authentication/pages/Register.jsx";
 import Protected from "./features/authentication/components/Protected.jsx";
+import Home from "./features/interview/pages/Home.jsx";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <Protected>
-        <div>Home Page</div>
+        <Home />
       </Protected>
     ),
   },
