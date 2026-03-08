@@ -95,10 +95,12 @@ const preparationPlanSchema = new mongoose.Schema({
     type: String,
     required: [true, "Focus is required"],
   },
-  tasks: {
-    type: String,
-    required: [true, "Task is required"],
-  },
+  tasks: [
+    {
+      type: String,
+      required: [true, "Task is required"],
+    },
+  ],
 });
 
 // Main Schema
@@ -123,12 +125,23 @@ const interviewReportSchema = new mongoose.Schema(
     behaviouralQuestions: [behaviouralQuestionsSchema],
     skillGaps: [skillGapsSchema],
     preparationPlan: [preparationPlanSchema],
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "users",
+    },
+    // title: {
+    //   type: String,
+    //   required: [true, "Job title is required"],
+    // },
   },
   {
     timestamps: true,
   },
 );
 
-const interviewReportModel = mongoose.model("InterviewReport", interviewReportSchema);
+const interviewReportModel = mongoose.model(
+  "InterviewReport",
+  interviewReportSchema,
+);
 
 module.exports = interviewReportModel;
